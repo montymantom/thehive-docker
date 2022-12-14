@@ -1,10 +1,10 @@
 #! /bin/bash
-mkdir ~/docker-compose1
-cd ~/docker-compose1
 
+# install docker and curl
 sudo snap install docker
 sudo snap install curl
 
+#stand up the instance using docker
 sudo docker-compose up -d
 
 curl -XPOST -H 'Authorization: Bearer ***API*KEY***' -H 'Content-Type: application/json' http://172.19.0.1:9000/api/case -d '{
